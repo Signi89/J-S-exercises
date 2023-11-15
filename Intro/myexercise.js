@@ -407,7 +407,7 @@ function findCandyAmount(){
     if(candyCount % 5 === 2 && candyCount % 6 === 4 && candyCount % 7 === 2)
     return candyCount
   }
-  return -1
+  return -1 
 }
 const candyAmount = findCandyAmount();
 if (candyAmount !== -1){
