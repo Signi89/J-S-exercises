@@ -231,7 +231,7 @@
 // let i = 1;
 // for (i; i <= number; i++) {
 //   if (number % i === 0) {
-//     divisors.push(i)
+//     divisors.push(i)[i]
 //   }
 // }
 // console.log("this are the divisors ", divisors)
@@ -402,18 +402,18 @@
 // and the amount left over is 3 pieces. Finally, you ask about dividing the candy evenly among 7
 // people, and the amount left over is 2 pieces. By looking at the bowl, you can tell that there are
 // less than 200 pieces. Write a program to determine how many pieces are in the bowl. 32
- const jarOfHallowen = [];
-const question1 = +prompt("how many candy will be left if you divide the jar of hallowen by 5");
-const answer1 = 2;
-const question2 = +prompt("how many candy will be left if you divide the jar of hallowen by 6");
-const answer2 = []
-const question3 = +prompt("how many candy will be left if you divide the jar of hallowen by 7");
-const answer3 = []
-if(jarOfHallowen < 200){
-  const remainder = (jarOfHallowen/5) === answer1
-  const remainder1 = (jarOfHallowen/5) === answer2  && answer2 > 3;
-  const remainder2 = (jarOfHallowen/5) === answer3 && answer3 > 2;
-  console.log(remainder,remainder1,remainder2)
+function findCandyAmount(){
+  for (let candyCount = 1; candyCount < 200;candyCount++){
+    if(candyCount % 5 === 2 && candyCount % 6 === 4 && candyCount % 7 === 2)
+    return candyCount
+  }
+  return -1
+}
+const candyAmount = findCandyAmount();
+if (candyAmount !== -1){
+  console.log("the candy bowl contains", candyAmount,"pieces of candy");
+}else{
+  console.log("no solution found within the specified limit")
 }
 
 

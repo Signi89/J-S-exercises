@@ -25,11 +25,14 @@
 // between 5 and 9. Display the list for those colours between the start and end
 // numbers the user input.
 
-let list = prompt('enter a list of 10 colours');
-let colours = (10)
-let startingNumber = (colours < 4);
-let endNumber = (colours === 5 && colours <= 9){
-    return(list + colours + startingNumber + endNumber);
+const colors = ['blue','white','yellow','green','violet','orange','black','brown','purple','grey']
+const startingNum = prompt('choose colors from 0 to 4')
+const endNum = prompt('choose colors 5 to 9')
+if (startingNum >= 0 && startingNum <= 4 && endNum >= 5 && endNum <= 9){
+    const selectedColors = colors.slice(startingNum,endNum + 1)
+    console.log(selectedColors)
+}else {
+    console.log("wrong input")
 }
 
 // 071  
@@ -50,19 +53,19 @@ let endNumber = (colours === 5 && colours <= 9){
 //     console.log(sportsList);
 // }
 
-075  
-Create a list of four three - digit numbers.Display the list to the user, showing each item from the list on a separate line.Ask 
-the user to enter a three - digit number.If the number they have typed in matches one in the list, display the position of 
-that number in the list, otherwise display the message “That is not in the list”.
+// 075  
+// Create a list of four three - digit numbers.Display the list to the user, showing each item from the list on a separate line.Ask 
+// the user to enter a three - digit number.If the number they have typed in matches one in the list, display the position of 
+// that number in the list, otherwise display the message “That is not in the list”.
 
-let list = ('001', '002', '003', '004');
-let result = split('list');
-let userNumber = prompt('enter a three-digit number');
-if userNumber = in(list){
-    console.log(of(...list)in(list));
-    else if(userNumber = !in(list)){
-        console.log('that is not in the list');
-    }
+// let list = ('001', '002', '003', '004');
+// let result = split('list');
+// let userNumber = prompt('enter a three-digit number');
+// if userNumber = in(list){
+//     console.log(of(...list)in(list));
+//     else if(userNumber = !in(list)){
+//         console.log('that is not in the list');
+//     }
         
     
-}
+// }
